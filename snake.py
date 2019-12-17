@@ -38,7 +38,7 @@ def move():
   q=0 #flag
   while q<1:
     for i in names:
-      e=diceroll()
+      e=dice()
       g=position[names.index(i)]
       input()
       print('\n')
