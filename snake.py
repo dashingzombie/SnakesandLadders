@@ -1,8 +1,14 @@
 import random
 
-position=[0,0]
+snakes={16:8,45:21,58:40,70:5,85:50,92:4,96:41,99:31}
+ladders={5:9,11:25,25:40,32:50,45:32,57:30,66:15,75:16}
+
+def dice():
+  d=(random.randint(1,6))
+  return d
 
 names=[]
+
 
 def players():
   for i in range(0,2):
@@ -17,19 +23,17 @@ def players():
   print('\n')
 
 player_place={}
+position=[0,0]
 
-def diceroll():
-  d1=(random.randint(1,6))
-  return d1
 
-snakes={16:8,45:21,58:40,70:5,85:50,92:4,96:41,99:31}
-ladders={5:9,11:25,25:40,32:50,45:32,57:30,66:15,75:16}
 
 def assign():
   for i in names:
     x=names.index(i)
     player_place[i]=position[x]
 print('Press enter to roll a dices')
+
+
 def move():
   q=0 #flag
   while q<1:
